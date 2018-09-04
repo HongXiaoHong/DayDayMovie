@@ -1,0 +1,75 @@
+body{
+	margin:0px;
+	font-family:'Î¢ÈíÑÅºÚ';
+	background:#FFF;
+}
+
+#page_head{
+	font-size:18px;
+	width:1070px; height:85px;
+	margin:0px auto;
+	vertical-align:middle;
+	line-height:75px;
+	/*  background:#666;  */
+}
+
+#nav{
+	width:1070px;
+	height:45px;
+	background:#333;
+	color:#FFF;
+	line-height:45px;
+	margin:0px auto;
+	border-left:1px solid #333;
+	border-right:1px solid #333;
+}
+
+#nav > div{
+	width:1070px; height:45px;
+	/* ----  background:#E2E2E2;  ---- */
+	text-align:left;
+	text-indent:0.8em;	
+	margin:0 auto;
+}
+
+
+/* ------------------------------------------------------------------------------------------------------- */
+
+#d_body{
+	width:1070px;
+	margin:auto;
+	border-left: 1px solid #B2B2B2;
+	border-right: 1px solid #B2B2B2;
+	background:#D2D2D2;
+}
+
+#d_foot{
+	width:1070px; height:50px;
+	background:#EFEFEF; margin:auto;
+	line-height: 50px;
+	border: 1px solid #B2B2B2;
+}
+
+#menu{ width:250px; height:100%; float:left; }
+#menu ul{
+	list-style:none;
+	margin:0px;
+	padding:0px;
+	color:#E2E2E2;
+	font-family:'Î¢ÈíÑÅºÚ';
+	text-indent:0.5em;
+	text-align:left;
+}
+
+#menu ul > li{
+	background:#666;
+	width:220px; height:35px;
+	margin-bottom:1px;
+	border-left: 30px solid #4D4D4D;
+	line-height:35px;	
+}
+
+#menu ul > li:hover{
+	background:#555;
+	cursor:pointer;
+}

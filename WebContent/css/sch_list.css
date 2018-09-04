@@ -1,0 +1,72 @@
+#mod_list{
+	width:1010px;
+	margin:10px auto;
+	/* background:#666; */
+}
+
+.mv_box{
+	border:1px solid #E2E2E2;
+	width:180px; height:195px; 
+	float:left; background:#FFF;
+	margin-left:25px;
+}
+.mv_box > .mv_img{
+	font-size:13px; color:#FFF;
+	position:relative;
+	width:168px; height:116px;
+	margin:3px auto;
+}
+.mv_box .text{
+	font-size:13px; text-align:left;
+	margin:auto 8px;
+}
+.text > span{
+	color:#999;
+}
+
+.mv_img > img{
+	position:absolute;
+	width:168px; height:116px;
+	left:0px; bottom:0px;
+}
+/* ºÚÌõ */
+.mv_img > div{
+	position:absolute; 
+	left:0px; bottom:0px;
+	width:168px; height:22px;
+	line-height:22px; text-align:right;	
+	/* background-color:#555; */
+	background-image:url('../images/trans_bar.png');
+}
+.mv_img span{ margin:auto 5px; }
+
+.sp_bar{
+	clear:both; height:20px;
+}
+
+
+#page_bar{ font-size:15px; }
+
+#page_bar > .pg_btn1{
+	border:1px solid #A3A3A3;
+	width:65px; height:28px;
+	display:inline-block;
+	line-height:28px;
+}
+#page_bar > .pg_btn2{
+	border:1px solid #A3A3A3;
+	width:35px; height:28px;
+	display:inline-block;
+	line-height:28px;
+}
+
+.on{ background-color:#F7941D }
+
+
+
+
+
+
+
+
+

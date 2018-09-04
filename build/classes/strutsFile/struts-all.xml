@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+    <package name="all" extends="struts-default">
+        <interceptors>
+            <!-- 自定义的拦截器 -->
+            <interceptor name="login_interceptor" class="com.hong.controller.filter.LoginInterceptor"></interceptor>
+            <interceptor name="code_interceptor" class="com.hong.controller.filter.CodeInterceptor"></interceptor>
+            <!-- 定义拦截器栈 -->
+            <interceptor-stack name="myinterceptor_stack">
+                <!-- 默认拦截器 -->
+                <interceptor-ref name="defaultStack"></interceptor-ref>
+                <!-- 自定义拦截器 -->
+                <interceptor-ref name="code_interceptor"></interceptor-ref>
+                <interceptor-ref name="login_interceptor"></interceptor-ref>
+            </interceptor-stack>
+        </interceptors>
+        <!-- 默认拦截器 -->
+        <default-interceptor-ref name="myinterceptor_stack"></default-interceptor-ref>
+
+        <!-- 全局结果集 -->
+        <global-results>
+            <result name="login">/</result>
+        </global-results>
+    </package>
+</struts>

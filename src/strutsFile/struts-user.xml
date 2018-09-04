@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+    <package name="User" namespace="/User" extends="all">
+        
+        <action name="login" class="com.hong.controller.UserAction" method="login">
+            <result name="success" type="redirect">/</result>
+            <result name="fail">/pages/login.jsp</result>
+        </action>
+        <action name="loginout" class="com.hong.controller.UserAction" method="loginout">
+            <!-- 无论退出成不成功都退回到首页-->
+            <result name="success" type="redirect">/</result>
+            <result name="fail" type="redirect">/</result>
+        </action>
+        <action name="regist" class="com.hong.controller.UserAction" method="regist">
+            <!-- 注册成功则将用户放入到session域中并跳转到首页，注册失败在此跳转到注册页面 -->
+            <result name="success" type="redirect">/</result>
+            <result name="fail">/pages/regist.jsp</result>
+        </action>
+        <action name="infoManage" class="com.hong.controller.UserAction" method="infoManage">
+            <result name="success">/WEB-INF/pages/user/edit.jsp</result>
+        </action>
+        <action name="saveUser" class="com.hong.controller.UserAction" method="saveUser">
+            <result name="success">/WEB-INF/pages/user/edit.jsp</result>
+        </action>
+        <action name="editPass" class="com.hong.controller.UserAction" method="editPass">
+            <result name="success">/WEB-INF/pages/user/editPass.jsp</result>
+        </action>
+    </package>
+</struts>

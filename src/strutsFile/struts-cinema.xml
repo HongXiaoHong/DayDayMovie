@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+    <constant name="struts.multipart.maxSize" value="52428800"/>
+    <package name="cinema" namespace="/cinema" extends="all">
+        
+        <action name="toUploadPage" class="com.hong.controller.CinemaAction" method="toUploadPage">
+            <result name="success">/WEB-INF/pages/video/upload.jsp</result>
+        </action>
+        
+        <action name="upload" class="com.hong.controller.CinemaAction" method="upload">
+		      <interceptor-ref name="fileUpload"> 
+		      <param name="maximumSize">31457280</param> 
+		      </interceptor-ref> 
+		      <interceptor-ref name="defaultStack" /> <!-- 默认拦截器 -->
+            <!-- 成功上传跳转到影片管理，等下配置完在回来写路径失败则跳转到首页-->
+            <result name="success" type="chain">list</result>
+            <result name="fail" type="redirect">/</result>
+        </action>
+        
+        <!-- 跳转到页面管理之前的处理action -->
+        <action name="list" class="com.hong.controller.CinemaAction" method="list">
+            <!-- 注册成功则将用户放入到session域中并跳转到首页，注册失败在此跳转到注册页面 -->
+            <result name="success">/WEB-INF/pages/video/movie_view.jsp</result>
+        </action>
+        <!-- 处理搜索的action -->
+        <action name="search" class="com.hong.controller.CinemaAction" method="search">
+            <!-- 注册成功则将用户放入到session域中并跳转到首页，注册失败在此跳转到注册页面 -->
+            <result name="success">/WEB-INF/pages/video/movie_view.jsp</result>
+        </action>
+        <!-- 处理影片编辑的action -->
+        <action name="edit" class="com.hong.controller.CinemaAction" method="edit">
+            <!-- 注册成功则将用户放入到session域中并跳转到首页，注册失败在此跳转到注册页面 -->
+            <result name="success">/WEB-INF/pages/video/editMovie.jsp</result>
+        </action>
+        <!-- 处理影片编辑的action -->
+        <action name="editMovie" class="com.hong.controller.CinemaAction" method="editMovie">
+            <!-- 注册成功则将用户放入到session域中并跳转到首页，注册失败在此跳转到注册页面 -->
+            <result name="success" type="chain">edit</result>
+        </action>
+        <!-- 处理删除影片的action -->
+        <action name="delete" class="com.hong.controller.CinemaAction" method="delete">
+            <!-- 注册成功则将用户放入到session域中并跳转到首页，注册失败在此跳转到注册页面 -->
+            <result name="success" type="chain">list</result>
+        </action>
+        <!-- 管理影片状态的action -->
+        <action name="stopAndOpen" class="com.hong.controller.CinemaAction" method="stopAndOpen">
+            <!-- 注册成功则将用户放入到session域中并跳转到首页，注册失败在此跳转到注册页面 -->
+            <result name="success" type="chain">list</result>
+        </action>
+        <!-- 处理影片播放的action -->
+        <action name="play" class="com.hong.controller.CinemaAction" method="play">
+            <!-- 注册成功则将用户放入到session域中并跳转到首页，注册失败在此跳转到注册页面 -->
+            <result name="success">/WEB-INF/pages/video/player.jsp</result>
+        </action>
+    </package>
+</struts>

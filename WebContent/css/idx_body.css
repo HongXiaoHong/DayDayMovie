@@ -1,0 +1,49 @@
+.mv_box{
+	width:215px; height:269px;
+	border:1px solid #B2B2B2;
+	float:left;	margin-top:5px;
+}
+.mv_box > .mv_img{
+	width:209px; height:263px;
+	background:#333;
+	margin: 3px auto;
+}
+.mv_box > .first{
+	margin-left:0px;
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - -*/
+
+.mv_top > #title {
+	font-size:23px; height:40px; 
+	width:280px; text-align:left;
+	line-height:40px;
+	/* background:#444; */
+	
+	/* vertical-align:middle; */
+	/*text-indent: 0.3em;*/
+}
+
+#title > span {
+	display:inline-block;
+	width:215px;
+	/* background:#333;	*/
+}
+
+
+.mv_top > #o_box{
+	border:1px solid #999; height:280px;
+}
+.mv_top .mbar{
+	margin-top:10px; height:60px;
+}
+.mv_top .mbox{
+	width:95px; height:60px;
+	float:left;
+}
+
+.mv_top .word{
+	width:164px; height:60px; float:left;
+	font-size:15px; text-align:left;
+	margin-left:8px;
+}

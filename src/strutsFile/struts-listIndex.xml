@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+    <package name="ListIndex" namespace="/ListIndex" extends="all">
+        
+        <action name="view" class="com.hong.controller.ListIndexAction" method="view">
+            <result name="success">/WEB-INF/pages/list/list_view.jsp</result>
+        </action>
+        <action name="edit" class="com.hong.controller.ListIndexAction" method="edit">
+            <result name="success">/WEB-INF/pages/list/editListIndex.jsp</result>
+        </action>
+        <action name="delete" class="com.hong.controller.ListIndexAction" method="delete">
+            <result name="success" type="redirectAction">view</result>
+        </action>
+        <action name="add" class="com.hong.controller.ListIndexAction" method="add">
+            <result name="success" type="chain">toAddMoviePage</result>
+        </action>
+        <action name="toAddMoviePage" class="com.hong.controller.ListIndexAction" method="toAddMoviePage">
+            <result name="success">/WEB-INF/pages/list/list_addmovie.jsp</result>
+        </action>
+        <action name="createList" class="com.hong.controller.ListIndexAction" method="createList">
+            <result name="success">/WEB-INF/pages/list/list_view.jsp</result>
+        </action>
+        <action name="toCreateListPage" class="com.hong.controller.ListIndexAction" method="toCreateListPage">
+            <result name="success">/WEB-INF/pages/list/create.jsp</result>
+        </action>
+        <action name="toPlayPage" class="com.hong.controller.ListIndexAction" method="toPlayPage">
+            <result name="success">/WEB-INF/pages/list/list_play.jsp</result>
+        </action>
+        <action name="addMovies" class="com.hong.controller.ListIndexAction" method="addMovies">
+            <result name="success" type="redirectAction">view</result>
+        </action>
+        <action name="deleteMovieList" class="com.hong.controller.ListIndexAction" method="deleteMovieList">
+            <result name="success" type="redirectAction">view</result>
+        </action>
+        <action name="search" class="com.hong.controller.ListIndexAction" method="search">
+            <result name="success">/WEB-INF/pages/list/list_view.jsp</result>
+        </action>
+        
+    </package>
+</struts>

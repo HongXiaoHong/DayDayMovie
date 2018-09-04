@@ -1,0 +1,28 @@
+label{ margin-left:20px; font-size:25px; }
+body{ font-family:Î¢ÈíÑÅºÚ; background:#FFF;margin:0px; }
+
+#txt_search{
+	border:1px #D2D2D2 solid;
+	background:#E2E2E2;
+	width:300px; height:39px;	
+	font-family:'Î¢ÈíÑÅºÚ'; font-size:18px;
+	text-indent:0.5em;	
+}
+
+input,img{ vertical-align:middle; }
+
+#page_head{
+	font-size:18px;
+	width:1010px; height:85px;
+	margin:0px auto;
+	vertical-align:middle;
+	line-height:75px;
+	/* background:#666; */
+}
+#dv_search{
+	float:left; margin: 20px 0px;
+	width:520px; height:39px;
+	text-align:right;
+	vertical-align:middle;
+	line-height:75px;	
+}

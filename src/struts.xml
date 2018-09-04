@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	<include file="strutsFile/struts-all.xml"></include>
+	<include file="strutsFile/struts-user.xml"></include>
+	<include file="strutsFile/struts-cinema.xml"></include>
+	<include file="strutsFile/struts-playList.xml"></include>
+	<include file="strutsFile/struts-listIndex.xml"></include>
+</struts>
